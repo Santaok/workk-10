@@ -28,11 +28,13 @@ video {
   position: absolute;
   object-fit: cover;
   object-position: center;
- 
+ z-index: -1;
 }
 
 h1::after {
   content: "*";
+  z-index: 99;
+ 
 }
 
 .text{
@@ -57,7 +59,7 @@ font-family: "Raleway-Bold";
   
   
 
-.text:hover::before {
+.text:hover::after {
 
   content: 'На самом деле нет.\AВажнее &mdash; научиться ошибаться.';
   white-space: pre;
@@ -70,36 +72,38 @@ font-family: "Raleway-Bold";
   font-size: 1.4vw;
   line-height: 25px;
   text-align: start;
-  padding: 26px 20px 26px 34px;
+  padding: 1vw 1vw;
 
   color: #000000;
 
 }
-.text:hover::before{
+.text:hover::after{
 
     width: 40vw;                     /*Окно */
-    height: 14vh;
-    left:49vh;
-    top: 21vh;
+    height: 7vw;
+    left:27vw;
+    top: 9vw;
     background: #FFFFFF;
-    border: 2px solid #000000;
-    border-radius: 0.5em;
+    border: 0.2vw solid #000000;
+    border-radius: 1vw;
     box-shadow: 0px 9px 0px rgb(0, 0, 0);
-    z-index: 2;
+    z-index: 3;
    position: absolute;
   
 
   }
 
-  .text:hover{
-
-color: #494747;
-
-
-  }
 
   /* видео z-1 окно z1*/
 
-
-
-
+.text:hover::before{
+    content: "";
+    position: absolute;
+  width: 300vw;
+  height: 300vh;
+top: -1vw;
+left: -26vw;
+    background-color: rgba(255, 255, 255, 0.179);
+    z-index: 0;
+  }
+  
